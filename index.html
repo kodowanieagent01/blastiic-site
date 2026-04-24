@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="azurRNzdH_pyUR1ZmPRe3gMpEZHiukmWs0qeSBLlouM" />
+  <title>BLASTIIC - Official Website</title>
+  <meta name="description" content="BLASTIIC - dark electronic music shaped over years. Official releases, upcoming music, and latest updates." />
+  <meta name="keywords" content="BLASTIIC, blastiic music, BLASTIIC producer, dark electronic music, BLASTIIC official" />
+  <meta name="author" content="BLASTIIC" />
+  <meta name="theme-color" content="#050505" />
+  <link rel="canonical" href="https://blastiic.com/" />
+  <meta property="og:title" content="BLASTIIC - Official Website" />
+  <meta property="og:description" content="Dark electronic music shaped over years." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blastiic.com" />
+  <meta property="og:image" content="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddb85b2aa942a32240d3c63" />
+  <meta property="og:site_name" content="BLASTIIC" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BLASTIIC - Official Website" />
+  <meta name="twitter:description" content="BLASTIIC - dark electronic music shaped over years. Official releases, upcoming music, and latest updates." />
+  <meta name="twitter:image" content="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddb85b2aa942a32240d3c63" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "BLASTIIC",
+      "url": "https://blastiic.com/",
+      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddb85b2aa942a32240d3c63",
+      "genre": ["Dark Electronic Music", "House", "Dance Pop"],
+      "sameAs": [
+        "https://open.spotify.com/artist/5k3Az6DJEpYGI6PjUTIHx4",
+        "https://www.instagram.com/blastiic_/",
+        "https://www.facebook.com/profile.php?id=100055075437006",
+        "https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg",
+        "https://soundcloud.com/blastiic"
+      ],
+      "track": {
+        "@type": "MusicRecording",
+        "name": "Show All My Love",
+        "url": "https://open.spotify.com/track/4KDV7RV1ReFd1Sumz1GZou"
+      }
+    }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            noir: "#050505",
+            frost: "#e7f3ff",
+            mist: "#d9d9d9"
+          },
+          letterSpacing: {
+            blast: "0.5em"
+          },
+          boxShadow: {
+            haze: "0 25px 60px rgba(0, 0, 0, 0.55)"
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #050505;
+      --text: #d9d9d9;
+      --glow: #e7f3ff;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Montserrat", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at center, rgba(5, 5, 5, 0) 36%, rgba(0, 0, 0, 0.78) 100%);
+    }
+
+    .site-layer {
+      position: relative;
+      z-index: 1;
+    }
+
+    .ii-pulse {
+      color: var(--glow);
+      animation: pulseGlow 2.8s ease-in-out infinite;
+      text-shadow: 0 0 8px rgba(231, 243, 255, 0.35), 0 0 18px rgba(231, 243, 255, 0.18);
+    }
+
+    @keyframes pulseGlow {
+      0%,
+      100% {
+        opacity: 0.7;
+        text-shadow: 0 0 7px rgba(231, 243, 255, 0.32), 0 0 14px rgba(231, 243, 255, 0.16);
+      }
+      50% {
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(231, 243, 255, 0.75), 0 0 30px rgba(231, 243, 255, 0.35);
+      }
+    }
+
+    .ghost-btn {
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      background: transparent;
+      color: #f1f1f1;
+      transition: background-color 240ms ease, color 240ms ease, border-color 240ms ease, box-shadow 240ms ease;
+    }
+
+    .ghost-btn:hover {
+      background: rgba(231, 243, 255, 0.9);
+      color: #050505;
+      border-color: rgba(231, 243, 255, 0.95);
+      box-shadow: 0 0 24px rgba(231, 243, 255, 0.2);
+    }
+
+    .topbar {
+      border-bottom: 1px solid rgba(124, 183, 255, 0.65);
+      box-shadow: 0 1px 0 rgba(124, 183, 255, 0.35);
+      background: rgba(0, 0, 0, 0.92);
+    }
+
+    .brand-chip {
+      border: 1px solid rgba(124, 183, 255, 0.6);
+      background: rgba(124, 183, 255, 0.14);
+      box-shadow: inset 0 0 14px rgba(124, 183, 255, 0.2);
+    }
+
+    .menu-chip {
+      border: 1px solid rgba(124, 183, 255, 0.55);
+      background: rgba(124, 183, 255, 0.14);
+    }
+
+    .menu-chip:hover {
+      background: rgba(124, 183, 255, 0.3);
+    }
+
+    .icon-link:hover {
+      color: #7cb7ff;
+    }
+
+    .logo-main {
+      letter-spacing: 0.18em;
+      font-weight: 900;
+      line-height: 0.95;
+      font-size: clamp(2.6rem, 13vw, 9rem);
+    }
+
+    .pill-btn {
+      border-radius: 9999px;
+      background: #ededed;
+      color: #070707;
+      transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+    }
+
+    .pill-btn:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+      box-shadow: 0 0 22px rgba(255, 255, 255, 0.25);
+    }
+
+    .parallax-soft {
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .deep-entry {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.005));
+    }
+
+  </style>
+</head>
+<body class="bg-noir text-mist antialiased">
+  <div class="site-layer">
+    <header class="topbar px-4 py-3 sm:px-6 md:px-8">
+      <div class="mx-auto flex max-w-[1400px] items-center justify-between gap-4">
+        <a href="#hero" class="brand-chip inline-flex items-center px-3 py-1 text-sm font-bold uppercase tracking-[0.14em] text-[#b5d5ff] sm:text-base">
+          BLAST<span class="ii-pulse">II</span>C
+        </a>
+
+        <div class="flex items-center gap-5 text-white/90">
+          <a href="#release" class="menu-chip px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[#b5d5ff] sm:text-xs">Release</a>
+          <a href="#about" class="menu-chip px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-[#b5d5ff] sm:text-xs">About</a>
+          <a href="https://www.instagram.com/blastiic_/" aria-label="Instagram" class="icon-link transition">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm0 2h10c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100055075437006" aria-label="Facebook" class="icon-link transition">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5h1.7V5c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.3V11H8v3h2.7v8h2.8z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg" aria-label="YouTube" class="icon-link transition">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M23.498 6.186a2.99 2.99 0 00-2.103-2.116C19.507 3.5 12 3.5 12 3.5s-7.507 0-9.395.57A2.99 2.99 0 00.502 6.186 31.15 31.15 0 000 12a31.15 31.15 0 00.502 5.814 2.99 2.99 0 002.103 2.116c1.888.57 9.395.57 9.395.57s7.507 0 9.395-.57a2.99 2.99 0 002.103-2.116A31.15 31.15 0 0024 12a31.15 31.15 0 00-.502-5.814zM9.75 15.568V8.432L16.026 12 9.75 15.568z"/></svg>
+          </a>
+          <a href="https://open.spotify.com/track/4KDV7RV1ReFd1Sumz1GZou?si=71bbabda5b374d09" aria-label="Spotify" class="icon-link transition">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.816 14.462a.998.998 0 01-1.374.33c-2.745-1.676-6.201-2.055-10.271-1.129a1 1 0 01-.443-1.95c4.598-1.046 8.546-.595 11.758 1.365a1 1 0 01.33 1.384zm1.356-3.02a1.25 1.25 0 01-1.72.413c-3.144-1.932-7.93-2.491-11.646-1.361a1.25 1.25 0 11-.727-2.392c4.253-1.292 9.563-.661 13.681 1.86a1.25 1.25 0 01.412 1.48zm.169-3.163C14.72 8.13 8.722 7.932 5.264 8.98a1.5 1.5 0 11-.872-2.87c3.975-1.207 10.586-.97 14.804 1.533a1.5 1.5 0 11-1.855 2.636z"/></svg>
+          </a>
+          <a href="https://soundcloud.com/blastiic" aria-label="SoundCloud" class="icon-link transition">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M10.6 9.2c-.2 0-.3.1-.3.3v7.8c0 .2.1.3.3.3s.3-.1.3-.3V9.5c0-.2-.1-.3-.3-.3zm-2 1.2c-.2 0-.3.1-.3.3v6.6c0 .2.1.3.3.3s.3-.1.3-.3v-6.6c0-.2-.1-.3-.3-.3zm-2 1.4c-.2 0-.3.1-.3.3v5.2c0 .2.1.3.3.3s.3-.1.3-.3v-5.2c0-.2-.1-.3-.3-.3zM4.6 13c-.2 0-.3.1-.3.3v4c0 .2.1.3.3.3s.3-.1.3-.3v-4c0-.2-.1-.3-.3-.3zM14 7.5c-1 0-1.8.2-2.6.7V17h8.4a3.2 3.2 0 000-6.4h-.4A5.7 5.7 0 0014 7.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="flex min-h-[95vh] items-center justify-center px-6 py-24 text-center md:px-12 md:py-32">
+        <div data-aos="fade-up" data-aos-duration="1050" class="mx-auto max-w-5xl">
+          <h1 id="heroTitle" class="logo-main parallax-soft uppercase text-white">
+            BLAST<span class="ii-pulse">II</span>C
+          </h1>
+          <p id="heroSubtitle" class="parallax-soft mt-16 text-xl font-black uppercase tracking-[0.14em] text-white/80 sm:mt-20 sm:text-2xl">Enter Deeper</p>
+        </div>
+      </section>
+
+      <section id="hero-message" class="deep-entry flex min-h-[92vh] items-center justify-center px-6 text-center md:px-12">
+        <div data-aos="fade-up" data-aos-duration="1050" data-aos-delay="120" class="mx-auto max-w-4xl">
+          <p class="text-3xl font-black tracking-[0.05em] text-white sm:text-5xl">Sound shaped in silence.</p>
+        </div>
+      </section>
+
+      <section id="hero-actions" class="deep-entry flex min-h-[88vh] items-center justify-center px-6 text-center md:px-12">
+        <div id="heroCta" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" class="parallax-soft mx-auto max-w-4xl">
+          <div class="flex flex-col items-center gap-5">
+            <a href="https://open.spotify.com/track/4KDV7RV1ReFd1Sumz1GZou?si=71bbabda5b374d09" class="pill-btn inline-flex min-w-[240px] items-center justify-center px-10 py-4 text-base font-black uppercase tracking-[0.08em]">
+              Out Now
+            </a>
+            <a href="#upcoming" class="pill-btn inline-flex min-w-[240px] items-center justify-center px-10 py-4 text-base font-black uppercase tracking-[0.08em]">
+              Upcoming
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="release" class="px-6 py-20 md:px-12">
+        <div class="mx-auto grid max-w-6xl gap-8 rounded-xl border border-white/10 bg-white/[0.03] p-7 shadow-haze backdrop-blur-sm md:grid-cols-[270px_1fr] md:p-10">
+          <div data-aos="fade-right" data-aos-duration="900" class="aspect-square rounded-md border border-white/15 bg-gradient-to-br from-white/15 via-transparent to-black/70 p-2 sm:p-3">
+            <img
+              src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddb85b2aa942a32240d3c63"
+              alt="Show All My Love cover art"
+              class="h-full w-full rounded object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div data-aos="fade-left" data-aos-duration="950" data-aos-delay="80" class="flex flex-col justify-between">
+            <div>
+              <p class="text-xs uppercase tracking-[0.24em] text-white/55">Latest Release</p>
+              <h2 class="mt-3 text-3xl font-bold uppercase tracking-[0.14em] text-white">Show All My Love</h2>
+              <p class="mt-5 max-w-xl text-sm leading-relaxed text-white/72">
+                Placeholder description: heavy groove, cold synth textures, and cinematic tension shaped for underground club energy.
+              </p>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="https://open.spotify.com/track/4KDV7RV1ReFd1Sumz1GZou?si=71bbabda5b374d09" class="ghost-btn inline-flex items-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] sm:text-sm">Spotify</a>
+              <a href="[PASTE_APPLE_MUSIC_LINK]" class="ghost-btn inline-flex items-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] sm:text-sm">Apple Music</a>
+              <a href="https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg" class="ghost-btn inline-flex items-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] sm:text-sm">YouTube</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="deep-entry flex min-h-[85vh] items-center justify-center px-6 py-24 text-center md:px-12 md:py-32">
+        <div data-aos="fade-up" data-aos-duration="950" class="mx-auto max-w-4xl">
+          <p class="text-2xl font-black uppercase tracking-[0.06em] text-white md:text-4xl">12 YEARS SHAPING SOUND.</p>
+          <p class="mt-6 text-sm leading-relaxed text-white/78 md:text-base">Built in silence</p>
+        </div>
+      </section>
+
+      <section id="upcoming" class="deep-entry flex min-h-[95vh] items-center justify-center px-6 py-24 md:px-12 md:py-32">
+        <div data-aos="fade-up" data-aos-duration="980" data-aos-delay="100" class="mx-auto max-w-6xl">
+          <h3 class="text-center text-2xl font-bold uppercase tracking-[0.12em] text-white md:text-3xl">UPCOMING</h3>
+          <div class="mt-12 flex justify-center">
+            <article data-aos="zoom-in-up" data-aos-duration="850" class="w-full max-w-md rounded-xl border border-white/12 bg-white/[0.02] px-7 py-10 text-center shadow-[0_0_26px_rgba(231,243,255,0.08)]">
+              <p class="text-[11px] uppercase tracking-[0.2em] text-white/55">NEXT SINGLE</p>
+              <p class="mt-3 text-lg font-semibold uppercase tracking-[0.1em] text-white">TOXIC</p>
+              <p class="mt-3 text-sm text-white/65">Coming soon.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="px-6 pb-10 pt-8 md:px-12">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-7">
+        <div class="flex items-center gap-4">
+          <a href="https://www.instagram.com/blastiic_/" aria-label="Instagram" class="text-white/70 transition hover:text-frost">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-current"><path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm0 2h10c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100055075437006" aria-label="Facebook" class="text-white/70 transition hover:text-frost">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-current"><path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.5 1.6-1.5h1.7V5c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.3V11H8v3h2.7v8h2.8z"/></svg>
+          </a>
+          <a href="https://open.spotify.com/track/4KDV7RV1ReFd1Sumz1GZou?si=71bbabda5b374d09" aria-label="Spotify" class="text-white/70 transition hover:text-frost">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-current"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.816 14.462a.998.998 0 01-1.374.33c-2.745-1.676-6.201-2.055-10.271-1.129a1 1 0 01-.443-1.95c4.598-1.046 8.546-.595 11.758 1.365a1 1 0 01.33 1.384zm1.356-3.02a1.25 1.25 0 01-1.72.413c-3.144-1.932-7.93-2.491-11.646-1.361a1.25 1.25 0 11-.727-2.392c4.253-1.292 9.563-.661 13.681 1.86a1.25 1.25 0 01.412 1.48zm.169-3.163C14.72 8.13 8.722 7.932 5.264 8.98a1.5 1.5 0 11-.872-2.87c3.975-1.207 10.586-.97 14.804 1.533a1.5 1.5 0 11-1.855 2.636z"/></svg>
+          </a>
+          <a href="https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg" aria-label="YouTube" class="text-white/70 transition hover:text-frost">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-current"><path d="M23.498 6.186a2.99 2.99 0 00-2.103-2.116C19.507 3.5 12 3.5 12 3.5s-7.507 0-9.395.57A2.99 2.99 0 00.502 6.186 31.15 31.15 0 000 12a31.15 31.15 0 00.502 5.814 2.99 2.99 0 002.103 2.116c1.888.57 9.395.57 9.395.57s7.507 0 9.395-.57a2.99 2.99 0 002.103-2.116A31.15 31.15 0 0024 12a31.15 31.15 0 00-.502-5.814zM9.75 15.568V8.432L16.026 12 9.75 15.568z"/></svg>
+          </a>
+          <a href="https://soundcloud.com/blastiic" aria-label="SoundCloud" class="text-white/70 transition hover:text-frost">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5 fill-current"><path d="M10.6 9.2c-.2 0-.3.1-.3.3v7.8c0 .2.1.3.3.3s.3-.1.3-.3V9.5c0-.2-.1-.3-.3-.3zm-2 1.2c-.2 0-.3.1-.3.3v6.6c0 .2.1.3.3.3s.3-.1.3-.3v-6.6c0-.2-.1-.3-.3-.3zm-2 1.4c-.2 0-.3.1-.3.3v5.2c0 .2.1.3.3.3s.3-.1.3-.3v-5.2c0-.2-.1-.3-.3-.3zM4.6 13c-.2 0-.3.1-.3.3v4c0 .2.1.3.3.3s.3-.1.3-.3v-4c0-.2-.1-.3-.3-.3zM14 7.5c-1 0-1.8.2-2.6.7V17h8.4a3.2 3.2 0 000-6.4h-.4A5.7 5.7 0 0014 7.5z"/></svg>
+          </a>
+        </div>
+
+        <a href="mailto:dj.blastiic@gmail.com" class="text-xs uppercase tracking-[0.2em] text-white/65 transition hover:text-frost">
+          dj.blastiic@gmail.com
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: "ease-out-cubic",
+      once: false,
+      mirror: true,
+      offset: 110
+    });
+
+    const heroTitle = document.getElementById("heroTitle");
+    const heroSubtitle = document.getElementById("heroSubtitle");
+    const heroCta = document.getElementById("heroCta");
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function animateParallax() {
+      const y = window.scrollY || 0;
+      const limit = window.innerHeight * 1.2;
+      const progress = clamp(y / limit, 0, 1);
+      const t1 = -56 * progress;
+      const t2 = -36 * progress;
+      const t3 = -22 * progress;
+
+      if (heroTitle) heroTitle.style.transform = `translate3d(0, ${t1}px, 0)`;
+      if (heroSubtitle) heroSubtitle.style.transform = `translate3d(0, ${t2}px, 0)`;
+      if (heroCta) heroCta.style.transform = `translate3d(0, ${t3}px, 0)`;
+    }
+
+    let ticking = false;
+    window.addEventListener("scroll", () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          animateParallax();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    animateParallax();
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+name: Weekly SEO Audit
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  seo-audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run SEO audit
+        id: audit
+        env:
+          SITE_URL: https://blastiic.com
+        run: bash scripts/seo-audit.sh
+
+      - name: Upload SEO report
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-audit-report
+          path: seo-audit-report.md
+
+      - name: Create issue when audit fails
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs");
+            const body = fs.readFileSync("seo-audit-report.md", "utf8");
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Weekly SEO audit alert - ${new Date().toISOString().slice(0, 10)}`,
+              body
+            });

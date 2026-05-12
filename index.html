@@ -223,6 +223,35 @@
     .wave-bar:nth-child(7) { animation-delay: 0.72s; }
     .wave-bar:nth-child(8) { animation-delay: 0.84s; }
 
+    .preview-button {
+      border: 1px solid rgba(231, 243, 255, 0.48);
+      background: rgba(231, 243, 255, 0.88);
+      color: #050505;
+      transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+    }
+
+    .preview-button:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+      box-shadow: 0 0 22px rgba(231, 243, 255, 0.2);
+    }
+
+    .preview-progress {
+      height: 2px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .preview-progress span {
+      display: block;
+      width: 0;
+      height: 100%;
+      border-radius: inherit;
+      background: rgba(231, 243, 255, 0.95);
+      box-shadow: 0 0 14px rgba(231, 243, 255, 0.35);
+    }
+
     @keyframes toxicWave {
       0%,
       100% {
@@ -370,8 +399,12 @@
                   <span class="wave-bar"></span>
                   <span class="wave-bar"></span>
                 </div>
-                <p class="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-frost/80">Preview locked</p>
-                <p class="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-white/65">A club-driven dance pop signal is forming. Full transmission coming soon.</p>
+                <audio class="toxic-audio" preload="metadata" src="assets/audio/toxic-preview.mp3"></audio>
+                <button type="button" class="preview-button toxic-play mt-5 inline-flex min-w-[170px] items-center justify-center rounded-full px-6 py-3 text-xs font-black uppercase tracking-[0.14em]" aria-label="Play TOXIC preview">
+                  Play Preview
+                </button>
+                <div class="preview-progress mx-auto mt-5 max-w-xs" aria-hidden="true"><span class="toxic-progress"></span></div>
+                <p class="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-white/65">A club-driven dance pop signal is forming. Full transmission coming soon.</p>
                 <a href="music.html" class="ghost-btn mt-7 inline-flex items-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em]">Open Music Page</a>
               </div>
             </article>
@@ -451,6 +484,44 @@
     }, { passive: true });
 
     animateParallax();
+
+    document.querySelectorAll(".toxic-preview").forEach((preview) => {
+      const audio = preview.querySelector(".toxic-audio");
+      const button = preview.querySelector(".toxic-play");
+      const progress = preview.querySelector(".toxic-progress");
+
+      if (!audio || !button || !progress) return;
+
+      button.addEventListener("click", () => {
+        document.querySelectorAll(".toxic-audio").forEach((otherAudio) => {
+          if (otherAudio !== audio) otherAudio.pause();
+        });
+
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
+      });
+
+      audio.addEventListener("play", () => {
+        button.textContent = "Pause Preview";
+      });
+
+      audio.addEventListener("pause", () => {
+        button.textContent = "Play Preview";
+      });
+
+      audio.addEventListener("timeupdate", () => {
+        const percent = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+        progress.style.width = `${percent}%`;
+      });
+
+      audio.addEventListener("ended", () => {
+        button.textContent = "Play Preview";
+        progress.style.width = "0%";
+      });
+    });
   </script>
 </body>
 </html>

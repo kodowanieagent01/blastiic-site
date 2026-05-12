@@ -191,6 +191,50 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.005));
     }
 
+    .toxic-preview {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .toxic-preview::before {
+      content: "";
+      position: absolute;
+      inset: -30%;
+      background: radial-gradient(circle at 50% 20%, rgba(231, 243, 255, 0.1), transparent 36%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .wave-bar {
+      width: 4px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(231, 243, 255, 0.78);
+      box-shadow: 0 0 14px rgba(231, 243, 255, 0.28);
+      animation: toxicWave 1.8s ease-in-out infinite;
+      transform-origin: center;
+    }
+
+    .wave-bar:nth-child(2) { animation-delay: 0.12s; }
+    .wave-bar:nth-child(3) { animation-delay: 0.24s; }
+    .wave-bar:nth-child(4) { animation-delay: 0.36s; }
+    .wave-bar:nth-child(5) { animation-delay: 0.48s; }
+    .wave-bar:nth-child(6) { animation-delay: 0.6s; }
+    .wave-bar:nth-child(7) { animation-delay: 0.72s; }
+    .wave-bar:nth-child(8) { animation-delay: 0.84s; }
+
+    @keyframes toxicWave {
+      0%,
+      100% {
+        transform: scaleY(0.45);
+        opacity: 0.42;
+      }
+      50% {
+        transform: scaleY(1.35);
+        opacity: 1;
+      }
+    }
+
     .seo-copy {
       position: absolute;
       width: 1px;
@@ -312,10 +356,24 @@
         <div data-aos="fade-up" data-aos-duration="980" data-aos-delay="100" class="mx-auto max-w-6xl">
           <h3 class="text-center text-2xl font-bold uppercase tracking-[0.12em] text-white md:text-3xl">UPCOMING</h3>
           <div class="mt-12 flex justify-center">
-            <article data-aos="zoom-in-up" data-aos-duration="850" class="w-full max-w-md rounded-xl border border-white/12 bg-white/[0.02] px-7 py-10 text-center shadow-[0_0_26px_rgba(231,243,255,0.08)]">
-              <p class="text-[11px] uppercase tracking-[0.2em] text-white/55">NEXT SINGLE</p>
-              <p class="mt-3 text-lg font-semibold uppercase tracking-[0.1em] text-white">TOXIC</p>
-              <p class="mt-3 text-sm text-white/65">Coming soon.</p>
+            <article data-aos="zoom-in-up" data-aos-duration="850" class="toxic-preview w-full max-w-xl rounded-xl border border-white/12 bg-white/[0.025] px-7 py-10 text-center shadow-[0_0_30px_rgba(231,243,255,0.1)]">
+              <div class="relative z-10">
+                <p class="text-[11px] uppercase tracking-[0.2em] text-white/55">NEXT SINGLE</p>
+                <p class="mt-3 text-2xl font-black uppercase tracking-[0.16em] text-white md:text-3xl">TOXIC</p>
+                <div class="mx-auto mt-8 flex h-16 max-w-xs items-center justify-center gap-2" aria-label="TOXIC preview waveform">
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                  <span class="wave-bar"></span>
+                </div>
+                <p class="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-frost/80">Preview locked</p>
+                <p class="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-white/65">A club-driven dance pop signal is forming. Full transmission coming soon.</p>
+                <a href="music.html" class="ghost-btn mt-7 inline-flex items-center px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em]">Open Music Page</a>
+              </div>
             </article>
           </div>
         </div>

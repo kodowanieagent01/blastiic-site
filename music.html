@@ -90,6 +90,45 @@
       border-color: rgba(231, 243, 255, 0.55);
       background: rgba(231, 243, 255, 0.08);
     }
+    .toxic-preview {
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 34px rgba(231, 243, 255, 0.08);
+    }
+    .toxic-preview::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 50% 15%, rgba(231, 243, 255, 0.11), transparent 34%);
+      pointer-events: none;
+    }
+    .wave-bar {
+      width: 4px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(231, 243, 255, 0.78);
+      box-shadow: 0 0 14px rgba(231, 243, 255, 0.28);
+      animation: toxicWave 1.8s ease-in-out infinite;
+      transform-origin: center;
+    }
+    .wave-bar:nth-child(2) { animation-delay: 0.12s; }
+    .wave-bar:nth-child(3) { animation-delay: 0.24s; }
+    .wave-bar:nth-child(4) { animation-delay: 0.36s; }
+    .wave-bar:nth-child(5) { animation-delay: 0.48s; }
+    .wave-bar:nth-child(6) { animation-delay: 0.6s; }
+    .wave-bar:nth-child(7) { animation-delay: 0.72s; }
+    .wave-bar:nth-child(8) { animation-delay: 0.84s; }
+    @keyframes toxicWave {
+      0%,
+      100% {
+        transform: scaleY(0.45);
+        opacity: 0.42;
+      }
+      50% {
+        transform: scaleY(1.35);
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -146,7 +185,22 @@
         <div class="mx-auto max-w-5xl border-t border-white/10 pt-10 text-center">
           <p class="text-[11px] uppercase tracking-[0.18em] text-white/45">Upcoming Release</p>
           <h2 class="mt-4 text-3xl font-bold uppercase tracking-[0.12em] text-white md:text-4xl">Toxic</h2>
-          <p class="mt-6 text-base leading-relaxed text-white/72">The next BLASTIIC single is Toxic. More details and release information will appear here as soon as they are announced.</p>
+          <div class="toxic-preview mx-auto mt-8 max-w-xl border border-white/12 bg-white/[0.025] px-7 py-10">
+            <div class="relative z-10">
+              <div class="mx-auto flex h-16 max-w-xs items-center justify-center gap-2" aria-label="TOXIC preview waveform">
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+                <span class="wave-bar"></span>
+              </div>
+              <p class="mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-frost/80">Preview locked</p>
+              <p class="mx-auto mt-3 max-w-sm text-base leading-relaxed text-white/72">A club-driven dance pop signal is forming. Full transmission coming soon.</p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

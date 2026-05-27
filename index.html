@@ -285,6 +285,48 @@
       fill: currentColor;
     }
 
+    .radio-section {
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(180deg, #050505, rgba(255, 255, 255, 0.025) 42%, #050505),
+        radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.07), transparent 34%);
+    }
+
+    .radio-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+      background-size: 72px 72px;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .radio-frame {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #000000;
+      box-shadow: 0 36px 120px rgba(0, 0, 0, 0.72);
+    }
+
+    .radio-frame video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000000;
+    }
+
+    .radio-meta {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.72);
+    }
+
     .pill-btn {
       border-radius: 9999px;
       background: #ededed;
@@ -363,7 +405,8 @@
         </a>
 
         <div class="flex items-center gap-5 text-white/90">
-          <a href="#release" class="menu-chip px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 sm:text-xs">Release</a>
+          <a href="#selects" class="menu-chip px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 sm:text-xs">Selects</a>
+          <a href="#release" class="menu-chip hidden px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 sm:inline-flex sm:text-xs">Release</a>
           <a href="#about" class="menu-chip px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 sm:text-xs">About</a>
           <a href="https://www.instagram.com/blastiic_/" aria-label="Instagram" class="icon-link hidden transition sm:inline-flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm0 2h10c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
@@ -408,9 +451,47 @@
               <a href="https://www.instagram.com/blastiic_/" class="platform-icon" aria-label="Instagram">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm0 2h10c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
               </a>
-              <a href="#release" class="platform-icon" aria-label="Latest release">
+              <a href="#selects" class="platform-icon" aria-label="BLASTIIC SELECTS">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.55A4 4 0 1014 17V7h6V3h-8z"/></svg>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="selects" class="radio-section px-5 py-20 sm:px-7 md:px-10 md:py-28 lg:px-12">
+        <div class="relative z-10 mx-auto max-w-[1400px]">
+          <div data-aos="fade-up" data-aos-duration="950" class="mx-auto max-w-5xl text-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.34em] text-white/48">Radio Show</p>
+            <h2 class="mt-4 text-4xl font-black uppercase tracking-[0.14em] text-white sm:text-5xl md:text-7xl">
+              BLAST<span class="ii-pulse">II</span>C SELECTS
+            </h2>
+            <p class="mx-auto mt-5 max-w-2xl text-sm uppercase leading-relaxed tracking-[0.22em] text-white/58">
+              Episode 001
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="950" data-aos-delay="120" class="radio-frame mx-auto mt-12 max-w-6xl">
+            <video controls preload="metadata" poster="assets/radio/blastiic-selects-001-cover.png">
+              <source src="assets/radio/blastiic-selects-001-web.m4v" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+            <div class="radio-meta grid gap-6 p-6 md:grid-cols-[1fr_auto] md:p-8">
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-white/45">Episode 001</p>
+                <h3 class="mt-2 text-2xl font-black uppercase tracking-[0.1em] text-white md:text-3xl">Selected music session</h3>
+              </div>
+              <div class="flex items-center gap-3 md:justify-end">
+                <a href="assets/radio/blastiic-selects-001-web.m4v" class="platform-icon" aria-label="Open BLASTIIC SELECTS 001 video">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/blastiic_/" class="platform-icon" aria-label="Follow BLASTIIC on Instagram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm0 2h10c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
+                </a>
+                <a href="https://soundcloud.com/blastiic" class="platform-icon" aria-label="Follow BLASTIIC on SoundCloud">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 9.2c-.2 0-.3.1-.3.3v7.8c0 .2.1.3.3.3s.3-.1.3-.3V9.5c0-.2-.1-.3-.3-.3zm-2 1.2c-.2 0-.3.1-.3.3v6.6c0 .2.1.3.3.3s.3-.1.3-.3v-6.6c0-.2-.1-.3-.3-.3zm-2 1.4c-.2 0-.3.1-.3.3v5.2c0 .2.1.3.3.3s.3-.1.3-.3v-5.2c0-.2-.1-.3-.3-.3zM4.6 13c-.2 0-.3.1-.3.3v4c0 .2.1.3.3.3s.3-.1.3-.3v-4c0-.2-.1-.3-.3-.3zM14 7.5c-1 0-1.8.2-2.6.7V17h8.4a3.2 3.2 0 000-6.4h-.4A5.7 5.7 0 0014 7.5z"/></svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -315,11 +315,30 @@
       box-shadow: 0 36px 120px rgba(0, 0, 0, 0.72);
     }
 
-    .radio-frame video {
+    .radio-frame img {
       display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
+      object-fit: cover;
       background: #000000;
+    }
+
+    .radio-poster {
+      position: relative;
+    }
+
+    .radio-poster::after {
+      content: "COMING FRIDAY";
+      position: absolute;
+      right: clamp(1rem, 4vw, 3rem);
+      bottom: clamp(1rem, 4vw, 3rem);
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: rgba(0, 0, 0, 0.72);
+      padding: 0.85rem 1.1rem;
+      color: #ffffff;
+      font-size: clamp(0.72rem, 1.8vw, 1rem);
+      font-weight: 800;
+      letter-spacing: 0.28em;
     }
 
     .radio-meta {
@@ -467,22 +486,21 @@
               BLAST<span class="ii-pulse">II</span>C SELECTS
             </h2>
             <p class="mx-auto mt-5 max-w-2xl text-sm uppercase leading-relaxed tracking-[0.22em] text-white/58">
-              Episode 001
+              Coming Friday
             </p>
           </div>
 
           <div data-aos="fade-up" data-aos-duration="950" data-aos-delay="120" class="radio-frame mx-auto mt-12 max-w-6xl">
-            <video controls preload="none" poster="assets/radio/blastiic-selects-001-cover.png">
-              <source src="assets/radio/blastiic-selects-001-web.m4v" type="video/mp4" />
-              Your browser does not support the video element.
-            </video>
+            <div class="radio-poster">
+              <img src="assets/radio/blastiic-selects-001-cover.png" alt="BLASTIIC SELECTS Episode 001 cover" loading="lazy" />
+            </div>
             <div class="radio-meta grid gap-6 p-6 md:grid-cols-[1fr_auto] md:p-8">
               <div>
                 <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-white/45">Episode 001</p>
-                <h3 class="mt-2 text-2xl font-black uppercase tracking-[0.1em] text-white md:text-3xl">Selected music session</h3>
+                <h3 class="mt-2 text-2xl font-black uppercase tracking-[0.1em] text-white md:text-3xl">Coming Friday</h3>
               </div>
               <div class="flex items-center gap-3 md:justify-end">
-                <a href="assets/radio/blastiic-selects-001-web.m4v" class="platform-icon" aria-label="Open BLASTIIC SELECTS 001 video">
+                <a href="https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg" class="platform-icon" aria-label="BLASTIIC YouTube channel">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                 </a>
                 <a href="https://www.instagram.com/blastiic_/" class="platform-icon" aria-label="Follow BLASTIIC on Instagram">

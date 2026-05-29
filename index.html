@@ -315,12 +315,21 @@
       box-shadow: 0 36px 120px rgba(0, 0, 0, 0.72);
     }
 
-    .radio-frame img {
+    .radio-frame img,
+    .radio-frame iframe {
       display: block;
       width: 100%;
       aspect-ratio: 16 / 9;
-      object-fit: cover;
       background: #000000;
+    }
+
+    .radio-frame img {
+      object-fit: cover;
+    }
+
+    .radio-frame iframe {
+      height: auto;
+      border: 0;
     }
 
     .radio-poster {
@@ -328,7 +337,7 @@
     }
 
     .radio-poster::after {
-      content: "COMING FRIDAY";
+      content: "PREMIERE TODAY 17:00";
       position: absolute;
       right: clamp(1rem, 4vw, 3rem);
       bottom: clamp(1rem, 4vw, 3rem);
@@ -497,21 +506,21 @@
               BLAST<span class="ii-pulse">II</span>C SELECTS
             </h2>
             <p class="mx-auto mt-5 max-w-2xl text-sm uppercase leading-relaxed tracking-[0.22em] text-white/58">
-              Coming Friday
+              Premiere today 17:00
             </p>
           </div>
 
           <div data-aos="fade-up" data-aos-duration="950" data-aos-delay="120" class="radio-frame mx-auto mt-12 max-w-6xl">
             <div class="radio-poster">
-              <img src="assets/radio/blastiic-selects-001-cover.png" alt="BLASTIIC SELECTS Episode 001 cover" loading="lazy" />
+              <iframe src="https://www.youtube.com/embed/bgxs9UUdsec?rel=0&modestbranding=1" title="BLASTIIC SELECTS Episode 001" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
             <div class="radio-meta grid gap-6 p-6 md:grid-cols-[1fr_auto] md:p-8">
               <div>
                 <p class="text-[11px] font-semibold uppercase tracking-[0.26em] text-white/45">Episode 001</p>
-                <h3 class="mt-2 text-2xl font-black uppercase tracking-[0.1em] text-white md:text-3xl">Coming Friday</h3>
+                <h3 class="mt-2 text-2xl font-black uppercase tracking-[0.1em] text-white md:text-3xl">Premiere today 17:00</h3>
               </div>
               <div class="flex items-center gap-3 md:justify-end">
-                <a href="https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg" class="platform-icon" aria-label="BLASTIIC YouTube channel">
+                <a href="https://youtu.be/bgxs9UUdsec?si=luoAstqqdOKsTMoW" class="platform-icon" aria-label="Watch BLASTIIC SELECTS Episode 001">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                 </a>
                 <a href="https://www.instagram.com/blastiic_/" class="platform-icon" aria-label="Follow BLASTIIC on Instagram">

@@ -4,43 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="azurRNzdH_pyUR1ZmPRe3gMpEZHiukmWs0qeSBLlouM" />
-  <title>BLASTIIC - Official Website</title>
-  <meta name="description" content="BLASTIIC - dark electronic music shaped over years. Official releases, upcoming music, and latest updates." />
-  <meta name="keywords" content="BLASTIIC, blastiic music, BLASTIIC producer, dark electronic music, BLASTIIC official" />
+  <title>BLASTIIC | Official Website, Music Producer &amp; DJ</title>
+  <meta name="description" content="Official website of BLASTIIC, a music producer and DJ creating modern electronic music, EDM, club tracks and the BLASTIIC SELECTS radio show." />
+  <meta name="keywords" content="BLASTIIC, Blastiic, blastiic official, BLASTIIC music, BLASTIIC producer, BLASTIIC DJ, BLASTIIC SELECTS, electronic music, EDM producer" />
   <meta name="author" content="BLASTIIC" />
   <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://blastiic.com/" />
-  <meta property="og:title" content="BLASTIIC - Official Website" />
-  <meta property="og:description" content="Dark electronic music shaped over years." />
+  <meta property="og:title" content="BLASTIIC | Official Website, Music Producer &amp; DJ" />
+  <meta property="og:description" content="Official website of BLASTIIC, a music producer and DJ creating modern electronic music, EDM, club tracks and the BLASTIIC SELECTS radio show." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://blastiic.com" />
-  <meta property="og:image" content="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddb85b2aa942a32240d3c63" />
+  <meta property="og:url" content="https://blastiic.com/" />
+  <meta property="og:image" content="https://blastiic.com/assets/images/blastiic-selects-001.png" />
+  <meta property="og:image:alt" content="BLASTIIC official artist visual" />
   <meta property="og:site_name" content="BLASTIIC" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BLASTIIC - Official Website" />
-  <meta name="twitter:description" content="BLASTIIC - dark electronic music shaped over years. Official releases, upcoming music, and latest updates." />
-  <meta name="twitter:image" content="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddb85b2aa942a32240d3c63" />
+  <meta name="twitter:title" content="BLASTIIC | Official Website, Music Producer &amp; DJ" />
+  <meta name="twitter:description" content="Official website of BLASTIIC, a music producer and DJ creating modern electronic music, EDM, club tracks and the BLASTIIC SELECTS radio show." />
+  <meta name="twitter:image" content="https://blastiic.com/assets/images/blastiic-selects-001.png" />
 
   <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "MusicGroup",
-      "name": "BLASTIIC",
-      "url": "https://blastiic.com/",
-      "image": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddb85b2aa942a32240d3c63",
-      "genre": ["Dark Electronic Music", "House", "Dance Pop"],
-      "sameAs": [
-        "https://open.spotify.com/artist/5k3Az6DJEpYGI6PjUTIHx4",
-        "https://www.instagram.com/blastiic_/",
-        "https://www.facebook.com/profile.php?id=100055075437006",
-        "https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg",
-        "https://soundcloud.com/blastiic"
-      ],
-      "track": {
-        "@type": "MusicRecording",
-        "name": "Show All My Love",
-        "url": "https://open.spotify.com/track/4KDV7RV1ReFd1Sumz1GZou"
-      }
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://blastiic.com/#website",
+                "name": "BLASTIIC Official Website",
+                "url": "https://blastiic.com/",
+                "inLanguage": "en",
+                "publisher": {
+                    "@id": "https://blastiic.com/#artist"
+                }
+            },
+            {
+                "@type": "MusicGroup",
+                "@id": "https://blastiic.com/#artist",
+                "name": "BLASTIIC",
+                "alternateName": [
+                    "Blastiic",
+                    "BLASTIIC SELECTS"
+                ],
+                "url": "https://blastiic.com/",
+                "image": "https://blastiic.com/assets/images/blastiic-selects-001.png",
+                "description": "BLASTIIC is a music producer and DJ creating modern electronic music inspired by club energy, melody and contemporary sound design.",
+                "genre": [
+                    "Electronic Music",
+                    "EDM",
+                    "House",
+                    "Club Music"
+                ],
+                "sameAs": [
+                    "https://open.spotify.com/artist/5k3Az6DJEpYGI6PjUTIHx4",
+                    "https://www.instagram.com/blastiic_/",
+                    "https://www.facebook.com/profile.php?id=100055075437006",
+                    "https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg",
+                    "https://soundcloud.com/blastiic"
+                ],
+                "track": {
+                    "@type": "MusicRecording",
+                    "name": "Show All My Love",
+                    "url": "https://open.spotify.com/track/4KDV7RV1ReFd1Sumz1GZou",
+                    "byArtist": {
+                        "@id": "https://blastiic.com/#artist"
+                    }
+                },
+                "subjectOf": {
+                    "@type": "VideoObject",
+                    "name": "BLASTIIC SELECTS Episode 001",
+                    "description": "BLASTIIC SELECTS Episode 001 radio show by BLASTIIC.",
+                    "thumbnailUrl": "https://blastiic.com/assets/radio/blastiic-selects-001-cover.png",
+                    "embedUrl": "https://www.youtube.com/embed/bgxs9UUdsec",
+                    "url": "https://youtu.be/bgxs9UUdsec"
+                }
+            }
+        ]
     }
   </script>
 

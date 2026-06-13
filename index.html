@@ -77,6 +77,16 @@
                     "embedUrl": "https://www.youtube.com/embed/8amL9R9AVE4",
                     "url": "https://youtu.be/8amL9R9AVE4",
                     "uploadDate": "2026-06-12T17:00:00+02:00"
+                },
+                "email": "mailto:dj.blastiic@gmail.com",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "email": "dj.blastiic@gmail.com",
+                    "contactType": "booking and collaborations",
+                    "availableLanguage": [
+                        "en",
+                        "pl"
+                    ]
                 }
             }
         ]
@@ -622,6 +632,93 @@
       text-transform: uppercase;
     }
 
+    .contact-section {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background:
+        linear-gradient(180deg, #050505, rgba(255, 255, 255, 0.02) 48%, #050505),
+        radial-gradient(circle at 88% 20%, rgba(255, 255, 255, 0.06), transparent 28%);
+    }
+
+    .contact-panel {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.025);
+      box-shadow: 0 34px 110px rgba(0, 0, 0, 0.62);
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .contact-card {
+      display: flex;
+      min-height: 13rem;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.28);
+      padding: 1.35rem;
+      transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.38);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .contact-kicker {
+      color: rgba(255, 255, 255, 0.42);
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .contact-title {
+      color: #ffffff;
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .contact-copy {
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 2.8rem;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      padding: 0 1rem;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease, color 220ms ease;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+    }
+
     .parallax-soft {
       will-change: transform;
       transform: translate3d(0, 0, 0);
@@ -690,6 +787,7 @@
           <a href="#selects" class="menu-chip px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 sm:text-xs">Selects</a>
           <a href="#release" class="menu-chip hidden px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 sm:inline-flex sm:text-xs">Music</a>
           <a href="#about" class="menu-chip px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 sm:text-xs">About</a>
+          <a href="#contact" class="menu-chip hidden px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white/72 md:inline-flex md:text-xs">Contact</a>
           <a href="https://www.instagram.com/blastiic_/" aria-label="Instagram" class="icon-link hidden transition sm:inline-flex">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-current"><path d="M7 2C4.239 2 2 4.239 2 7v10c0 2.761 2.239 5 5 5h10c2.761 0 5-2.239 5-5V7c0-2.761-2.239-5-5-5H7zm0 2h10c1.657 0 3 1.343 3 3v10c0 1.657-1.343 3-3 3H7c-1.657 0-3-1.343-3-3V7c0-1.657 1.343-3 3-3zm11 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/></svg>
           </a>
@@ -900,6 +998,49 @@
                 <div class="preview-progress mt-5 max-w-xs" aria-hidden="true"><span class="toxic-progress"></span></div>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section px-5 py-20 sm:px-7 md:px-10 md:py-28 lg:px-12">
+        <div class="mx-auto max-w-6xl">
+          <div data-aos="fade-up" data-aos-duration="900" class="max-w-3xl">
+            <p class="text-xs font-semibold uppercase tracking-[0.34em] text-white/45">Contact</p>
+            <h2 class="mt-4 text-4xl font-black uppercase tracking-[0.16em] text-white md:text-6xl">Bookings & updates</h2>
+            <p class="mt-5 max-w-2xl text-sm uppercase leading-relaxed tracking-[0.18em] text-white/55">
+              For shows, collaborations, press and release updates.
+            </p>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="950" data-aos-delay="100" class="contact-panel mt-12 p-5 md:p-7">
+            <div class="contact-grid">
+              <article class="contact-card">
+                <div>
+                  <p class="contact-kicker">Booking</p>
+                  <h3 class="contact-title mt-4">Shows & DJ sets</h3>
+                  <p class="contact-copy mt-4">For club nights, events and performance requests.</p>
+                </div>
+                <a href="mailto:dj.blastiic@gmail.com?subject=BLASTIIC%20booking" class="contact-link mt-8">Send request</a>
+              </article>
+
+              <article class="contact-card">
+                <div>
+                  <p class="contact-kicker">Music</p>
+                  <h3 class="contact-title mt-4">Collaborations</h3>
+                  <p class="contact-copy mt-4">For production, remix, label and creative opportunities.</p>
+                </div>
+                <a href="mailto:dj.blastiic@gmail.com?subject=BLASTIIC%20collaboration" class="contact-link mt-8">Contact</a>
+              </article>
+
+              <article class="contact-card">
+                <div>
+                  <p class="contact-kicker">Artist list</p>
+                  <h3 class="contact-title mt-4">Release updates</h3>
+                  <p class="contact-copy mt-4">Get notified about new music and BLASTIIC SELECTS episodes.</p>
+                </div>
+                <a href="mailto:dj.blastiic@gmail.com?subject=Join%20BLASTIIC%20artist%20list" class="contact-link mt-8">Join list</a>
+              </article>
+            </div>
           </div>
         </div>
       </section>

@@ -429,6 +429,85 @@
       background: rgba(0, 0, 0, 0.72);
     }
 
+    .episode-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .episode-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .episode-card {
+      display: grid;
+      grid-template-columns: minmax(7.5rem, 11rem) 1fr;
+      min-height: 8.6rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      background: rgba(255, 255, 255, 0.025);
+      color: inherit;
+      transition: transform 220ms ease, border-color 220ms ease, background-color 220ms ease;
+    }
+
+    .episode-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.42);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .episode-thumb {
+      min-height: 100%;
+      background-position: center;
+      background-size: cover;
+      filter: grayscale(0.22);
+    }
+
+    .episode-content {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+
+    .episode-tag {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    .episode-title {
+      color: #ffffff;
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .episode-link-label {
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 520px) {
+      .episode-card {
+        grid-template-columns: 1fr;
+      }
+
+      .episode-thumb {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
     .about-section {
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       background: #050505;
@@ -606,6 +685,40 @@
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 9.2c-.2 0-.3.1-.3.3v7.8c0 .2.1.3.3.3s.3-.1.3-.3V9.5c0-.2-.1-.3-.3-.3zm-2 1.2c-.2 0-.3.1-.3.3v6.6c0 .2.1.3.3.3s.3-.1.3-.3v-6.6c0-.2-.1-.3-.3-.3zm-2 1.4c-.2 0-.3.1-.3.3v5.2c0 .2.1.3.3.3s.3-.1.3-.3v-5.2c0-.2-.1-.3-.3-.3zM4.6 13c-.2 0-.3.1-.3.3v4c0 .2.1.3.3.3s.3-.1.3-.3v-4c0-.2-.1-.3-.3-.3zM14 7.5c-1 0-1.8.2-2.6.7V17h8.4a3.2 3.2 0 000-6.4h-.4A5.7 5.7 0 0014 7.5z"/></svg>
                 </a>
               </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="900" data-aos-delay="180" class="mx-auto mt-8 max-w-6xl">
+            <div class="mb-4 flex items-end justify-between gap-4">
+              <div>
+                <p class="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/42">Archive</p>
+                <h3 class="mt-2 text-xl font-black uppercase tracking-[0.14em] text-white md:text-2xl">BLASTIIC SELECTS episodes</h3>
+              </div>
+              <a href="https://www.youtube.com/channel/UCkW0Qg98-JCEIg1cCUazvpg" class="hidden text-[11px] font-bold uppercase tracking-[0.2em] text-white/55 transition hover:text-white sm:inline-flex">YouTube channel</a>
+            </div>
+
+            <div class="episode-grid">
+              <a href="https://youtu.be/8amL9R9AVE4" class="episode-card" aria-label="Watch BLASTIIC SELECTS Episode 002">
+                <div class="episode-thumb" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28)), url('https://i.ytimg.com/vi/8amL9R9AVE4/hqdefault.jpg');"></div>
+                <div class="episode-content">
+                  <div>
+                    <p class="episode-tag">Latest / Jun 12 2026</p>
+                    <h4 class="episode-title">Episode 002</h4>
+                  </div>
+                  <span class="episode-link-label">Watch on YouTube</span>
+                </div>
+              </a>
+
+              <a href="https://youtu.be/bgxs9UUdsec" class="episode-card" aria-label="Watch BLASTIIC SELECTS Episode 001">
+                <div class="episode-thumb" style="background-image: linear-gradient(90deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28)), url('assets/radio/blastiic-selects-001-cover.png');"></div>
+                <div class="episode-content">
+                  <div>
+                    <p class="episode-tag">Previous / May 29 2026</p>
+                    <h4 class="episode-title">Episode 001</h4>
+                  </div>
+                  <span class="episode-link-label">Watch on YouTube</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

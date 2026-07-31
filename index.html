@@ -735,6 +735,33 @@
       overflow: hidden;
     }
 
+    .toxic-cover-art {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 52%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.94;
+      pointer-events: none;
+    }
+
+    .toxic-player::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, rgba(5, 5, 5, 0.98) 0%, rgba(5, 5, 5, 0.93) 42%, rgba(5, 5, 5, 0.18) 78%, rgba(5, 5, 5, 0.04) 100%);
+      pointer-events: none;
+    }
+
+    .toxic-card-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 62%;
+    }
+
     .toxic-player::before {
       content: "";
       position: absolute;
@@ -1018,12 +1045,13 @@
             </article>
 
             <article data-aos="fade-up" data-aos-duration="900" data-aos-delay="170" class="music-item toxic-player flex flex-col justify-between gap-8">
-              <div>
+              <img src="assets/images/toxic-cover.jpg" alt="TOXIC cover art" class="toxic-cover-art" loading="lazy" />
+              <div class="toxic-card-copy">
                 <p class="music-status">Upcoming</p>
                 <h4 class="mt-5 text-2xl font-black uppercase tracking-[0.13em] text-white">TOXIC</h4>
                 <p class="mt-4 text-sm leading-relaxed text-white/58">Next single preview. Full release coming soon.</p>
               </div>
-              <div>
+              <div class="toxic-card-copy">
                 <audio class="toxic-audio" preload="metadata" src="assets/audio/toxic-preview.mp3"></audio>
                 <button type="button" class="preview-button toxic-play inline-flex min-w-[160px] items-center justify-center rounded-full px-6 py-3 text-xs font-black uppercase tracking-[0.14em]" aria-label="Play TOXIC preview">
                   Play Preview

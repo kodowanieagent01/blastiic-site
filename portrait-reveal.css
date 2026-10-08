@@ -1,0 +1,8 @@
+/* Accepted portrait: scale, exposure and shadow are deliberately retained. */
+#blastiic-mono .portrait{filter:brightness(.46) contrast(1.19);opacity:1;transform:translateX(-50%) scale(.88);transform-origin:50% 0%;-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 43%,#0009 72%,transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 43%,#0009 72%,transparent 100%)}
+#blastiic-mono .portrait-shadow{opacity:1;background:linear-gradient(90deg,#000e 0%,#0008 29%,#0002 40%,#0009 51%,#000e 64%,#000 82%),radial-gradient(ellipse at var(--portrait-light) 33%,transparent 5%,#0005 23%,#000d 56%,#000 85%)}
+#blastiic-mono .portrait-veil{position:absolute;inset:0 auto 0 0;width:200%;z-index:0;pointer-events:none;opacity:0;background:linear-gradient(105deg,#000 0%,#000 38%,#000e 46%,#0007 54%,transparent 65%);transform:translateX(-70%)}
+#blastiic-mono .opening.reveal-playing .portrait-veil{animation:portrait-light-pass 3.8s cubic-bezier(.2,.55,.22,1) both}#blastiic-mono .opening.reveal-playing .portrait{animation:portrait-emerge 3.8s cubic-bezier(.2,.55,.22,1) both}
+@keyframes portrait-light-pass{0%,8%{transform:translateX(0);opacity:1}75%{opacity:1}100%{transform:translateX(-70%);opacity:0}}@keyframes portrait-emerge{0%{opacity:.08}25%{opacity:.2}65%{opacity:.8}100%{opacity:1}}
+@media(max-width:600px){#blastiic-mono .portrait-shadow{background:linear-gradient(90deg,#000c 0%,#0005 25%,#0002 36%,#0009 51%,#000e 70%,#000 95%),radial-gradient(ellipse at 40% 31%,transparent 5%,#0005 27%,#000d 62%,#000 90%)}}
+@media(prefers-reduced-motion:reduce){#blastiic-mono .opening.reveal-playing .portrait,#blastiic-mono .opening.reveal-playing .portrait-veil{animation:none}}

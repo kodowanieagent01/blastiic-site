@@ -1,0 +1,93 @@
+[
+  {
+    "number": "013",
+    "video": "DNdVpFz3GtU",
+    "date": "Oct 9 2026",
+    "releaseAt": "2026-10-09T08:00:00+00:00",
+    "status": "premiere"
+  },
+  {
+    "number": "012",
+    "video": "kWtYAiKC0qQ",
+    "date": "Oct 2 2026",
+    "releaseAt": "2026-10-02T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "011",
+    "video": "g7NCyIrKvdU",
+    "date": "Sep 25 2026",
+    "releaseAt": "2026-09-25T08:00:07+00:00",
+    "status": "published"
+  },
+  {
+    "number": "010",
+    "video": "iXj3qfP7HjA",
+    "date": "Sep 18 2026",
+    "releaseAt": "2026-09-18T08:00:22+00:00",
+    "status": "published"
+  },
+  {
+    "number": "009",
+    "video": "7270ZNs9lJI",
+    "date": "Sep 11 2026",
+    "releaseAt": "2026-09-11T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "008",
+    "video": "8-zEnAyLRoM",
+    "date": "Sep 4 2026",
+    "releaseAt": "2026-09-04T06:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "007",
+    "video": "TsRTybVvX6k",
+    "date": "Aug 21 2026",
+    "releaseAt": "2026-08-21T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "006",
+    "video": "XbtTwWTF2qQ",
+    "date": "Aug 7 2026",
+    "releaseAt": "2026-08-07T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "005",
+    "video": "WQvhZC213w0",
+    "date": "Jul 24 2026",
+    "releaseAt": "2026-07-24T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "004",
+    "video": "TkiK8XuR3wI",
+    "date": "Jul 10 2026",
+    "releaseAt": "2026-07-10T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "003",
+    "video": "loLJL9NUu8o",
+    "date": "Jun 26 2026",
+    "releaseAt": "2026-06-26T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "002",
+    "video": "8amL9R9AVE4",
+    "date": "Jun 12 2026",
+    "releaseAt": "2026-06-12T08:00:06+00:00",
+    "status": "published"
+  },
+  {
+    "number": "001",
+    "video": "bgxs9UUdsec",
+    "date": "May 29 2026",
+    "releaseAt": "2026-05-29T15:00:06+00:00",
+    "status": "published"
+  }
+]

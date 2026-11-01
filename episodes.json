@@ -1,10 +1,31 @@
 [
   {
+    "number": "016",
+    "video": "xOe4pjvjbtA",
+    "date": "Oct 30 2026",
+    "releaseAt": "2026-10-30T09:00:10+00:00",
+    "status": "published"
+  },
+  {
+    "number": "015",
+    "video": "o5uh7h9jtoU",
+    "date": "Oct 23 2026",
+    "releaseAt": "2026-10-23T08:00:10+00:00",
+    "status": "published"
+  },
+  {
+    "number": "014",
+    "video": "sYNMfUtFeDY",
+    "date": "Oct 16 2026",
+    "releaseAt": "2026-10-16T08:00:06+00:00",
+    "status": "published"
+  },
+  {
     "number": "013",
     "video": "DNdVpFz3GtU",
     "date": "Oct 9 2026",
     "releaseAt": "2026-10-09T08:00:00+00:00",
-    "status": "premiere"
+    "status": "published"
   },
   {
     "number": "012",

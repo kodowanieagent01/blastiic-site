@@ -5,7 +5,7 @@
  menu.addEventListener('click',()=>toggle(true));dialog.querySelector('.close').addEventListener('click',()=>toggle(false));dialog.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>toggle(false)));
  document.addEventListener('keydown',e=>{if(dialog.hidden)return;if(e.key==='Escape')toggle(false);if(e.key==='Tab'){const items=[...dialog.querySelectorAll('a,button')],first=items[0],last=items.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
  document.getElementById('copyright-year').textContent=new Date().getFullYear();
- fetch('episodes.json?v=20261008').then(r=>{if(!r.ok)throw Error('archive');return r.json()}).then(episodes=>{
+ fetch('episodes.json', {cache:'no-store'}).then(r=>{if(!r.ok)throw Error('archive');return r.json()}).then(episodes=>{
   const latest=episodes[0],picker=root.querySelector('.episode-picker');
   const buttonTemplate=picker.querySelector('button').cloneNode(true);picker.querySelectorAll('button').forEach(b=>b.remove());
   function select(e){root.querySelector('.transmission-title').textContent='SELECTS '+e.number;root.querySelector('.episode-watch').href='selects.html?episode='+e.number;document.getElementById('home-episode-status').textContent=isUpcoming(e)?'UPCOMING PREMIERE':'SELECTED TRANSMISSION';picker.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.episode===e.number)))}
